@@ -23,6 +23,6 @@ package frameworkJeuDeDes;
  * @author Samuel
  *
  */
-public class CollectionDes {
+public class CollectionDes implements Agregat{
 
 }

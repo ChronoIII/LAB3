@@ -23,6 +23,6 @@ package frameworkJeuDeDes;
  * @author Samuel
  *
  */
-public class De {
+public class De implements Comparable{
 
 }

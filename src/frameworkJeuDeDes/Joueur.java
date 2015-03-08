@@ -23,6 +23,6 @@ package frameworkJeuDeDes;
  * @author Samuel
  *
  */
-public class Joueur {
+public class Joueur implements Comparable{
 
 }
