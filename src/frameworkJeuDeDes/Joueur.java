@@ -10,12 +10,12 @@ Chargé de cours : Francis Cardinal
 Chargé de laboratoire : Patrice Boucher
 Date créé: 2015-03-08
 Date dern. modif. 2015-03-08
-*******************************************************
+ *******************************************************
 Historique des modifications
-*******************************************************
+ *******************************************************
 2015-03-08 Version initiale 
-*******************************************************/
-
+2015-03-10 Ajout des fonctions de base.
+ *******************************************************/
 
 package frameworkJeuDeDes;
 
@@ -23,6 +23,43 @@ package frameworkJeuDeDes;
  * @author Samuel
  *
  */
-public class Joueur implements Comparable{
+public class Joueur implements Comparable {
+	private int pointage;
+	private String[] facesObtenues;
+
+	public Joueur() {
+
+	}
+	
+	private void roulerDes(){
+		
+	}
+	public void jouer(){
+		
+	}
+	
+	
+	
+	
+	
+	public int getPointage() {
+		return pointage;
+	}
+
+	public void setPointage(int pointage) {
+		this.pointage = pointage;
+	}
+
+	public String[] getFacesObtenues() {
+		return facesObtenues;
+	}
+
+	public void setFacesObtenues(String[] facesObtenues) {
+		this.facesObtenues = facesObtenues;
+	}
+
+	
+
+	
 
 }

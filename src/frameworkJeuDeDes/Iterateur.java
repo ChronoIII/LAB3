@@ -14,6 +14,7 @@ Date dern. modif. 2015-03-08
 Historique des modifications
 *******************************************************
 2015-03-08 Version initiale 
+2015-03-10 Ajout des fonctions de base.
 *******************************************************/
 
 
@@ -24,5 +25,7 @@ package frameworkJeuDeDes;
  *
  */
 public class Iterateur {
+	public int position;
+	public Object[] items;
 
 }
