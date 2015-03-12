@@ -25,4 +25,7 @@ package frameworkJeuDeDes;
  */
 public interface Comparable {
 
+	public Comparable biggerScore(Comparable comparable);
+	public Comparable smallerScore(Comparable comparable);
+	public boolean hasSameScore(Comparable comparable);
 }

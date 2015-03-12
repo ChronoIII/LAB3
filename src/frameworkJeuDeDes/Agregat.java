@@ -21,4 +21,5 @@ package frameworkJeuDeDes;
 
 public interface Agregat {
 
+	public void createItarator();
 }

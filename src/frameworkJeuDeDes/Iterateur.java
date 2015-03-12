@@ -25,7 +25,7 @@ package frameworkJeuDeDes;
  *
  */
 public class Iterateur {
+	
 	public int position;
 	public Object[] items;
-
 }

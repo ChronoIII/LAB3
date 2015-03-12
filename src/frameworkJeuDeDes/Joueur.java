@@ -28,19 +28,26 @@ public class Joueur implements Comparable {
 	private String[] facesObtenues;
 
 	public Joueur() {
-
+		pointage = 0;
 	}
 	
-	private void roulerDes(){
-		
-	}
-	public void jouer(){
+	private void roulerDes() {
 		
 	}
 	
+	public void jouer() {
+		
+	}
 	
-	
-	
+	public Comparable biggerScore(Comparable joueur) {
+		return joueur;
+	}
+	public Comparable smallerScore(Comparable joueur) {
+		return joueur;
+	}
+	public boolean hasSameScore(Comparable joueur) {
+		return true;
+	}
 	
 	public int getPointage() {
 		return pointage;

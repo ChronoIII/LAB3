@@ -19,6 +19,7 @@ Historique des modifications
 
 package frameworkJeuDeDes;
 
-public class IStrategie {
+public interface IStrategie {
 
+	public int calculer(Jeu jeu);
 }
