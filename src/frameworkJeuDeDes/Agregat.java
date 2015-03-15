@@ -10,16 +10,18 @@ Chargé de cours : Francis Cardinal
 Chargé de laboratoire : Patrice Boucher
 Date créé: 2015-03-08
 Date dern. modif. 2015-03-08
-*******************************************************
+ *******************************************************
 Historique des modifications
-*******************************************************
+ *******************************************************
 2015-03-08 Version initiale 
-*******************************************************/
-
+ *******************************************************/
 
 package frameworkJeuDeDes;
 
-public interface Agregat {
-
-	public void createItarator();
+public interface Agregat<T> {
+	/**
+	 * 
+	 * @return Un itérateur du type demandé
+	 */
+	public Iterateur<T> createIterator();
 }

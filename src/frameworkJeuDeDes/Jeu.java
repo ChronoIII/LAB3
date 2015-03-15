@@ -26,11 +26,25 @@ package frameworkJeuDeDes;
 public class Jeu {
 	private int tour;
 	private int nbTours;
+	private IStrategie strategie;
 	private CollectionJoueurs listJoueurs;
 	private CollectionDes listDes;
 
-	public Jeu() {
-
+	public Jeu(IStrategie aStrategie, CollectionJoueurs aListJoueurs,
+			CollectionDes aListDes) {
+		strategie = aStrategie;
+		nbTours = strategie.getNombreTours();
+		listJoueurs = aListJoueurs;
+		listDes = aListDes;
+	}
+	public void jouerTour(){
+		//passer tous les joueurs et calculer leurs points
+		
+	}
+	public void calculerVainqueur(){
+		//passer à travers tous les joueurs avec l'itérateur
+		//trouver le joueur avec le meilleur score
+		//à l'aide de la stratégie
 	}
 
 	public int getTour() {

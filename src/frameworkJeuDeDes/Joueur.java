@@ -23,32 +23,45 @@ package frameworkJeuDeDes;
  * @author Samuel
  *
  */
-public class Joueur implements Comparable {
+public class Joueur implements Comparable<Joueur> {
+
+	private String nom;
 	private int pointage;
 	private String[] facesObtenues;
 
+	private static int nextJoueurCree = 1;
+
 	public Joueur() {
 		pointage = 0;
+		nom = "Joueur " + nextJoueurCree;
+		nextJoueurCree++;
 	}
-	
-	private void roulerDes() {
-		
+
+	private void roulerDes(CollectionDes des) {
+		// À FAIRE
+		// Iterateur<De> i = des.createIterator();
+
 	}
-	
+
 	public void jouer() {
-		
+
 	}
-	
-	public Comparable biggerScore(Comparable joueur) {
-		return joueur;
+
+	/**
+	 * @param aJoueur
+	 * @return 0 si pointage sont égaux, 1 si aJoueur>this, -1 si aJoueur<this
+	 */
+	public int compareTo(Joueur aJoueur) {
+		int comparer = 0;
+		if (this.getPointage() < aJoueur.getPointage()) {
+			comparer = 1;
+		}
+		if (this.getPointage() > aJoueur.getPointage()) {
+			comparer = -1;
+		}
+		return comparer;
 	}
-	public Comparable smallerScore(Comparable joueur) {
-		return joueur;
-	}
-	public boolean hasSameScore(Comparable joueur) {
-		return true;
-	}
-	
+
 	public int getPointage() {
 		return pointage;
 	}
@@ -60,13 +73,5 @@ public class Joueur implements Comparable {
 	public String[] getFacesObtenues() {
 		return facesObtenues;
 	}
-
-	public void setFacesObtenues(String[] facesObtenues) {
-		this.facesObtenues = facesObtenues;
-	}
-
-	
-
-	
 
 }
