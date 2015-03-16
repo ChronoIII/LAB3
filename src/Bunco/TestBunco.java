@@ -2,19 +2,18 @@
 Cours:   LOG121
 Session: H2015
 Groupe: 03
-Projet: Laboratoire #
-Étudiant(e)s: Samuel Laroche
+Projet: Laboratoire # 3
+Étudiant(e)s: Samuel Laroche, Olivier Gévremont, Amélie Nguyen, Alexemdre Daigle-Sam yeng
               
               
 Chargé de cours : Francis Cardinal
 Chargé de laboratoire : Patrice Boucher
 Nom du fichier: 
-Date créé: 2015-0X-XX
-Date dern. modif. 2015-0X-XX
+Date créé: 2015-03-15
 *******************************************************
 Historique des modifications
 *******************************************************
-2015-0X-XX Version initiale 
+2015-03-15 Version initiale 
 *******************************************************/
 
 
@@ -64,7 +63,7 @@ public class TestBunco {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		fail("si tu fail, soit on rit de toi, ou on pleur parce que le programme ne marche pas");
 	}
 
 }

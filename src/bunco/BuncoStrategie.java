@@ -29,57 +29,49 @@ public class BuncoStrategie implements IStrategie {
 
 		
 
-		do{
-			similaire =0;
+		do {
+			similaire = 0;
 			pointNonTour = false;
 			bunco = true;
 
 
-			for (int i =0; i<NB_DES; i++){
-				jeu.getListDes().getDe(i).rouler();}
-
-			if (Integer.parseInt(jeu.getListDes().getDe(0).getFaceObtenue())==tour){
-
-				similaire++;
-
+			for (int i =0; i<NB_DES; i++) {
+				jeu.getListDes().getDe(i).rouler();
 			}
-			if (Integer.parseInt(jeu.getListDes().getDe(1).getFaceObtenue())==tour){
 
+			if (Integer.parseInt(jeu.getListDes().getDe(0).getFaceObtenue()) == tour) {
 				similaire++;
-
 			}
-			if (Integer.parseInt(jeu.getListDes().getDe(2).getFaceObtenue())==tour){
-
+			
+			if (Integer.parseInt(jeu.getListDes().getDe(1).getFaceObtenue()) == tour) {
 				similaire++;
-
 			}
-			if (similaire == 3){
-
+			
+			if (Integer.parseInt(jeu.getListDes().getDe(2).getFaceObtenue()) == tour) {
+				similaire++;
+			}
+			
+			if (similaire == 3) {
 				bunco = true;
-
 			}
 
-			if (Integer.parseInt(jeu.getListDes().getDe(0).getFaceObtenue())!=tour&&Integer.parseInt(jeu.getListDes().getDe(0).getFaceObtenue()) == Integer.parseInt(jeu.getListDes().getDe(1).getFaceObtenue())&&Integer.parseInt(jeu.getListDes().getDe(1).getFaceObtenue())==Integer.parseInt(jeu.getListDes().getDe(2).getFaceObtenue())){
-				
+			if (Integer.parseInt(jeu.getListDes().getDe(0).getFaceObtenue()) != tour&&Integer.parseInt(jeu.getListDes().getDe(0).getFaceObtenue()) == Integer.parseInt(jeu.getListDes().getDe(1).getFaceObtenue())&&Integer.parseInt(jeu.getListDes().getDe(1).getFaceObtenue()) == Integer.parseInt(jeu.getListDes().getDe(2).getFaceObtenue())) {				
 				pointNonTour=true;
-
 			}
 			
 			tour++;
 			
-		}while(tour <=6 && similaire !=0 &&!bunco);
+		}while(tour <= 6 && similaire != 0 &&! bunco);
 		
 		//calculer point
 		
-		if (similaire == 1){
+		if (similaire == 1) {
 			somme = somme +1;	
-		}
-		else if (similaire == 2){
+		} else if (similaire == 2) {
 			somme = somme +2;	
-		}
-		else if (bunco){
+		} else if (bunco) {
 			somme = somme +21;	
-		}else if (pointNonTour){
+		} else if (pointNonTour) {
 			somme = somme +5;	
 		}
 		
@@ -97,5 +89,4 @@ public class BuncoStrategie implements IStrategie {
 	public int getNombreDes() {
 		return NB_DES;
 	}
-
 }
