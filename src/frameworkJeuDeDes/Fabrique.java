@@ -1,6 +1,6 @@
 package frameworkJeuDeDes;
 
-import bunco.BuncoStrategie;
+import Bunco.BuncoStrategie;
 
 public class Fabrique {
 	/**

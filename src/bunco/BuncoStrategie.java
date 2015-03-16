@@ -1,4 +1,4 @@
-package bunco;
+package Bunco;
 
 import frameworkJeuDeDes.IStrategie;
 import frameworkJeuDeDes.Jeu;
