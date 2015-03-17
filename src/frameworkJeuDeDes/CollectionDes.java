@@ -85,4 +85,8 @@ public class CollectionDes implements Agregat<De> {
 			listDes[i] = listTemp[i];
 		}
 	}
+	
+	public int length(){
+		return listDes.length;
+	}
 }

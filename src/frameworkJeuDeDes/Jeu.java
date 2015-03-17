@@ -30,18 +30,22 @@ public class Jeu {
 	private CollectionJoueurs listJoueurs;
 	private CollectionDes listDes;
 
-	public Jeu(IStrategie aStrategie, CollectionJoueurs aListJoueurs,
-			CollectionDes aListDes) {
+	public Jeu(IStrategie aStrategie, CollectionJoueurs aListJoueurs, CollectionDes aListDes) {
 		strategie = aStrategie;
 		nbTours = strategie.getNombreTours();
 		listJoueurs = aListJoueurs;
 		listDes = aListDes;
 	}
-	public void jouerTour(){
+	
+	public void jouerTour(int tour) {
+		this.tour = tour; 
+		System.out.println();
+		System.out.println("tour :" + this.tour);
+		strategie.calculerScoreTour(this);
 		//passer tous les joueurs et calculer leurs points
-		
 	}
-	public void calculerVainqueur(){
+	
+	public void calculerVainqueur() {
 		//passer à travers tous les joueurs avec l'itérateur
 		//trouver le joueur avec le meilleur score
 		//à l'aide de la stratégie
