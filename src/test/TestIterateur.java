@@ -4,11 +4,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import frameworkJeuDeDes.EmptyCollectionException;
+import frameworkJeuDeDes.Iterateur;
+
 public class TestIterateur {
 
 	@Test
 	public void testIterateur() {
 		fail("Not yet implemented");
+
 	}
 
 	@Test

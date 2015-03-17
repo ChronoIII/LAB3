@@ -2,13 +2,21 @@ package test;
 
 import org.junit.Test;
 
+import frameworkJeuDeDes.CollectionDes;
+import frameworkJeuDeDes.CollectionJoueurs;
+import frameworkJeuDeDes.IStrategie;
+import frameworkJeuDeDes.Jeu;
 import junit.framework.TestCase;
 
 public class TestJeu extends TestCase {
+	private IStrategie strategie;
+	private CollectionJoueurs listJoueurs;
+	private CollectionDes listDes;
 
 	@Test
 	public void testJeu() {
-		fail("Not yet implemented");
+		Jeu jeuTest=new Jeu(strategie, listJoueurs, listDes);
+		assertNotNull(jeuTest);
 	}
 
 	@Test
