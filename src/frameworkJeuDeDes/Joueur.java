@@ -3,18 +3,21 @@ Cours:   LOG121
 Session: H2015
 Groupe: 03
 Projet: Laboratoire #3
-Étudiant(e)s: Samuel Laroche
+Étudiant(e)s: Samuel Laroche, Olivier Gévremont, Amélie Nguyen, Alexemdre Daigle-Sam yeng
               
               
 Chargé de cours : Francis Cardinal
 Chargé de laboratoire : Patrice Boucher
 Date créé: 2015-03-08
-Date dern. modif. 2015-03-08
+Date dern. modif. 2015-03-17 
  *******************************************************
 Historique des modifications
  *******************************************************
 2015-03-08 Version initiale 
 2015-03-10 Ajout des fonctions de base.
+2015-03-17 les fonctions de la méthode joueur
+2015-03-17 setPointage -> ajouterpoints
+2015-03-17 supprimer rouler
  *******************************************************/
 
 package frameworkJeuDeDes;
@@ -36,12 +39,6 @@ public class Joueur implements Comparable<Joueur> {
 		nom = "Joueur " + nextJoueurCree;
 		nextJoueurCree++;
 	}
-
-	//private void roulerDes(CollectionDes des) {
-		// À FAIRE
-		// Iterateur<De> i = des.createIterator();
-
-	//}
 
 	public void jouer(CollectionDes des) {
 		facesObtenues = new String[des.length()];
@@ -71,7 +68,7 @@ public class Joueur implements Comparable<Joueur> {
 		return pointage;
 	}
 
-	public void ajouterPointage(int pointage) {
+	public void ajouterPoints(int pointage) {
 		this.pointage = this.pointage + pointage;
 	}
 
@@ -79,4 +76,7 @@ public class Joueur implements Comparable<Joueur> {
 		return facesObtenues;
 	}
 
+	public String getNom(){
+		return nom;
+	}
 }

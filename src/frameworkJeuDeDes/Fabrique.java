@@ -1,7 +1,30 @@
+/******************************************************
+Cours:   LOG121
+Session: H2015
+Groupe: 03
+Projet: Laboratoire #3
+Étudiant(e)s: Samuel Laroche, Olivier Gévremont, Amélie Nguyen, Alexemdre Daigle-Sam yeng
+              
+              
+Chargé de cours : Francis Cardinal
+Chargé de laboratoire : Patrice Boucher
+Date créé: 2015-03-15
+Date dern. modif. 2015-03-15
+ *******************************************************
+Historique des modifications
+ *******************************************************
+2015-03-15 Version initiale 
+2015-03-15 fonctionnement de base
+ *******************************************************/
+
 package frameworkJeuDeDes;
 
 import Bunco.BuncoStrategie;
 
+/**
+ * @author Oliver
+ *
+ */
 public class Fabrique {
 	/**
 	 * Initialise un jeu Bunco+

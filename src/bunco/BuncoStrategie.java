@@ -1,5 +1,29 @@
+/******************************************************
+Cours:   LOG121
+Session: H2015
+Groupe: 03
+Projet: Laboratoire #3
+Étudiant(e)s: Samuel Laroche, Olivier Gévremont, Amélie Nguyen, Alexemdre Daigle-Sam yeng
+              
+              
+Chargé de cours : Francis Cardinal
+Chargé de laboratoire : Patrice Boucher
+Date créé: 2015-03-15
+Date dern. modif. 2015-03-17
+ *******************************************************
+Historique des modifications
+ *******************************************************
+2015-03-15 Version initiale 
+2015-03-17 fonctionnement de base
+2015-03-17 vainqueur
+ *******************************************************/
+
 package Bunco;
 
+/**
+ * @author Oliver
+ *
+ */
 import frameworkJeuDeDes.De;
 import frameworkJeuDeDes.Joueur;
 import frameworkJeuDeDes.IStrategie;
@@ -10,7 +34,7 @@ public class BuncoStrategie implements IStrategie {
 	public static final int NB_TOURS = 6;
 	public static final int NB_DES = 3;
 	
-	private int tour = 1;
+	private int tour = 0;
 	private int similaire;
 	private boolean pointNonTour;
 	private boolean bunco;
@@ -18,29 +42,37 @@ public class BuncoStrategie implements IStrategie {
 
 	@Override
 	public String calculerLeVainqueur(Jeu jeu) {
-		// TODO Auto-generated method stub
-		return "";
+		Iterateur<Joueur> i = jeu.getListJoueurs().createIterator();
+		Joueur meneur = i.currentItem();
+		
+		while(i.hasNext()) {
+			Joueur aComparable = i.next();
+			if(meneur.compareTo(aComparable) == 1) {
+				meneur = aComparable;
+			}
+		}
+		return meneur.getNom();
 	}
 
 	@Override
 	public void calculerScoreTour(Jeu jeu) {
-		//(de1.compareTo(de2)==0) ou quelque chose du genre pour bunco
-
 		tour = jeu.getTour();
 		Iterateur<Joueur> i = jeu.getListJoueurs().createIterator();
 
-		while(i.hasNext()){
+		while(i.hasNext()) {
 			System.out.println();
-			System.out.println("Joueur : " + i.currentItemPosition());
+			System.out.println(i.currentItem().getNom());
+			
 			do {
+				//paramètres de base pour calculer le score du joueur, doit être remis à zéro à chaque roulement de dés
 				somme = 0;
 				similaire = 0;
 				pointNonTour = false;
 				bunco = false;
 				
-				//jeu.getListJoueurs().getJoueur(j).jouer(jeu.getListDes());
-				i.currentItem().jouer(jeu.getListDes());
+				i.currentItem().jouer(jeu.getListDes());//faire joueurle joueur
 				
+				//afficher les résultats des dés
 				System.out.println(i.currentItem().getFacesObtenues()[0] + " " + i.currentItem().getFacesObtenues()[1] + " " + i.currentItem().getFacesObtenues()[2]);
 	
 				//Comparaison entre les 3 dés et le tour
@@ -66,7 +98,7 @@ public class BuncoStrategie implements IStrategie {
 					pointNonTour=true;
 				}
 				
-				//calculer point
+				//calculer points
 				if (similaire == 1) {
 					somme = somme +1;	
 				} else if (similaire == 2) {
@@ -77,14 +109,13 @@ public class BuncoStrategie implements IStrategie {
 					somme = somme +5;	
 				}
 				
-				i.currentItem().ajouterPointage(somme);
-			}while(similaire != 0 && !bunco);
+				i.currentItem().ajouterPoints(somme);//ajouter le pointage au joueur
+			} while(similaire != 0 && !bunco);
 			
 			System.out.println("pointage :" + i.currentItem().getPointage());
-			i.next();
+			i.next();//passer à l'autre joueur
 		}
 	}
-
 
 	@Override
 	public int getNombreTours() {

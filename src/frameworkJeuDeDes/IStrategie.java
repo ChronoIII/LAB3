@@ -3,7 +3,7 @@ Cours:   LOG121
 Session: H2015
 Groupe: 03
 Projet: Laboratoire #3
-Étudiant(e)s: Samuel Laroche
+Étudiant(e)s: Samuel Laroche, Olivier Gévremont, Amélie Nguyen, Alexemdre Daigle-Sam yeng
               
               
 Chargé de cours : Francis Cardinal
@@ -18,6 +18,10 @@ Historique des modifications
 
 package frameworkJeuDeDes;
 
+/**
+ * @author Oliver
+ *
+ */
 public interface IStrategie {
 	/**
 	 * 
