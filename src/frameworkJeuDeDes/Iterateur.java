@@ -53,7 +53,7 @@ public class Iterateur<T> {
 	 * @return true s'il y a un prochain item avant la fin de la liste
 	 */
 	public boolean hasNext() {
-		return (position < items.length - 1);
+		return (position < items.length);
 	}
 
 	/**
@@ -62,5 +62,9 @@ public class Iterateur<T> {
 	 */
 	public T currentItem() {
 		return items[position];
+	}
+	
+	public int currentItemPosition() {
+		return position;
 	}
 }

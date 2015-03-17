@@ -38,7 +38,7 @@ public class De implements Comparable<De> {
 	 * @return
 	 */
 	public String rouler() {
-		faceObtenue = faces[(int) Math.round(Math.random() * faces.length)];
+		faceObtenue = faces[(int) Math.round(Math.random() * (faces.length - 1))];
 		return faceObtenue;
 	}
 

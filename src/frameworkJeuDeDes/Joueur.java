@@ -37,14 +37,19 @@ public class Joueur implements Comparable<Joueur> {
 		nextJoueurCree++;
 	}
 
-	private void roulerDes(CollectionDes des) {
+	//private void roulerDes(CollectionDes des) {
 		// À FAIRE
 		// Iterateur<De> i = des.createIterator();
 
-	}
+	//}
 
-	public void jouer() {
-
+	public void jouer(CollectionDes des) {
+		facesObtenues = new String[des.length()];
+		Iterateur<De> i = des.createIterator();
+		while(i.hasNext()){
+			facesObtenues[i.currentItemPosition()] = i.currentItem().rouler();
+			i.next();
+		}
 	}
 
 	/**
@@ -66,8 +71,8 @@ public class Joueur implements Comparable<Joueur> {
 		return pointage;
 	}
 
-	public void setPointage(int pointage) {
-		this.pointage = pointage;
+	public void ajouterPointage(int pointage) {
+		this.pointage = this.pointage + pointage;
 	}
 
 	public String[] getFacesObtenues() {

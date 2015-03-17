@@ -93,4 +93,8 @@ public class CollectionJoueurs implements Agregat<Joueur> {
 			listJoueurs[i] = listTemp[i];
 		}
 	}
+	
+	public int length(){
+		return listJoueurs.length;
+	}
 }
