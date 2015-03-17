@@ -3,7 +3,7 @@ Cours:   LOG121
 Session: H2015
 Groupe: 03
 Projet: Laboratoire #3
-Étudiant(e)s: Samuel Laroche
+Étudiant(e)s: Samuel Laroche, Olivier Gévremont, Amélie Nguyen, Alexemdre Daigle-Sam yeng
               
               
 Chargé de cours : Francis Cardinal
@@ -72,8 +72,4 @@ public class De implements Comparable<De> {
 	public String getFaceObtenue() {
 		return faceObtenue;
 	}
-
-	// public String face(int numFace) {
-	// return faces[numFace];
-	// }
 }

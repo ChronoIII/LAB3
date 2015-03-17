@@ -3,7 +3,7 @@ Cours:   LOG121
 Session: H2015
 Groupe: 03
 Projet: Laboratoire #3
-Étudiant(e)s: Samuel Laroche
+Étudiant(e)s: Samuel Laroche, Olivier Gévremont, Amélie Nguyen, Alexemdre Daigle-Sam yeng
               
               
 Chargé de cours : Francis Cardinal
@@ -15,6 +15,7 @@ Historique des modifications
  *******************************************************
 2015-03-08 Version initiale 
 2015-03-10 Ajout des fonctions de base.
+2015-03-17 fonction dans joueurTour et calculerVainqueur
  *******************************************************/
 
 package frameworkJeuDeDes;
@@ -36,19 +37,25 @@ public class Jeu {
 		listJoueurs = aListJoueurs;
 		listDes = aListDes;
 	}
-	
+	/**
+	 * 
+	 * @param tour
+	 */
 	public void jouerTour(int tour) {
 		this.tour = tour; 
+		
 		System.out.println();
 		System.out.println("tour :" + this.tour);
-		strategie.calculerScoreTour(this);
-		//passer tous les joueurs et calculer leurs points
+		
+		strategie.calculerScoreTour(this);//passer tous les joueurs et calculer leurs points
 	}
 	
+	/**
+	 * 
+	 */
 	public void calculerVainqueur() {
-		//passer à travers tous les joueurs avec l'itérateur
-		//trouver le joueur avec le meilleur score
-		//à l'aide de la stratégie
+		System.out.println();
+		System.out.println("Le vainqueur est " + strategie.calculerLeVainqueur(this));
 	}
 
 	public int getTour() {
