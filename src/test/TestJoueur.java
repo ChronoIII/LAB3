@@ -37,8 +37,8 @@ public class TestJoueur extends TestCase {
 	public void testCompareTo() {
 		int comparer1 = 0;
 		int comparer2 = 0;
-		joueurTest.ajouterPointage(1);
-		joueurTest2.ajouterPointage(2);
+		joueurTest.ajouterPoints(1);
+		joueurTest2.ajouterPoints(2);
 		joueurTest.compareTo(joueurTest2);
 		if (comparer1 != comparer2) {
 			if (joueurTest.compareTo(joueurTest2)
