@@ -74,7 +74,11 @@ public class CollectionJoueurs implements Agregat<Joueur> {
 	 * @return Le joueur à la position demandée
 	 */
 	public Joueur getJoueur(int pos) {
-		return listJoueurs[pos];
+		if (pos >= listJoueurs.length) {
+			return null;
+		} else {
+			return listJoueurs[pos];
+		}
 	}
 
 	/**
@@ -94,8 +98,8 @@ public class CollectionJoueurs implements Agregat<Joueur> {
 			listJoueurs[i] = listTemp[i];
 		}
 	}
-	
-	public int length(){
+
+	public int length() {
 		return listJoueurs.length;
 	}
 }

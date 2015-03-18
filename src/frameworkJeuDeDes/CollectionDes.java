@@ -27,10 +27,12 @@ package frameworkJeuDeDes;
 public class CollectionDes implements Agregat<De> {
 
 	private De[] listDes;
-/**
- * Ajoute un dé à la collection
- * @param de
- */
+
+	/**
+	 * Ajoute un dé à la collection
+	 * 
+	 * @param de
+	 */
 	public void ajouterDe(De de) {
 		De[] listTemp = listDes;
 		if (listDes == null) {
@@ -44,17 +46,20 @@ public class CollectionDes implements Agregat<De> {
 
 		listDes[listDes.length - 1] = de;
 	}
-/**
- * Substitue un dé par un autre
- * @param de
- * @param pos
- */
+
+	/**
+	 * Substitue un dé par un autre
+	 * 
+	 * @param de
+	 * @param pos
+	 */
 	public void ReplaceDe(De de, int pos) {
 		listDes[pos] = de;
 	}
-/**
- * Crée un itérateur
- */
+
+	/**
+	 * Crée un itérateur
+	 */
 	public Iterateur<De> createIterator() {
 		try {
 			return new Iterateur<De>(listDes);
@@ -62,18 +67,25 @@ public class CollectionDes implements Agregat<De> {
 			return null;
 		}
 	}
-/**
- *
- * @param pos
- * @return un dé à la position demandée
- */
+
+	/**
+	 *
+	 * @param pos
+	 * @return un dé à la position demandée
+	 */
 	public De getDe(int pos) {
-		return listDes[pos];
+		if (pos >= listDes.length) {
+			return null;
+		} else {
+			return listDes[pos];
+		}
 	}
-/**
- * Détruit le dé à la position demandée
- * @param pos
- */
+
+	/**
+	 * Détruit le dé à la position demandée
+	 * 
+	 * @param pos
+	 */
 	public void destroyDe(int pos) {
 		De[] listTemp = listDes;
 		listDes = new De[listDes.length - 1];
@@ -86,8 +98,8 @@ public class CollectionDes implements Agregat<De> {
 			listDes[i] = listTemp[i];
 		}
 	}
-	
-	public int length(){
+
+	public int length() {
 		return listDes.length;
 	}
 }
