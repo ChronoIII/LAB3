@@ -53,9 +53,12 @@ public class Jeu {
 	/**
 	 * 
 	 */
-	public void calculerVainqueur() {
+	public void calculerVainqueurs() {
 		System.out.println();
-		System.out.println("Le vainqueur est " + strategie.calculerLeVainqueur(this));
+		String[] nomsVainqueurs = strategie.calculerLeVainqueurs(this);	
+		for (int i = 0; i < nomsVainqueurs.length; i++) {
+			System.out.println("Le vainqueur est " + nomsVainqueurs[i]);
+		}
 	}
 
 	public int getTour() {

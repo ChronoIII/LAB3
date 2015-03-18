@@ -19,7 +19,7 @@ Historique des modifications
 
 package frameworkJeuDeDes;
 
-import Bunco.BuncoStrategie;
+import bunco.BuncoStrategie;
 
 /**
  * @author Oliver

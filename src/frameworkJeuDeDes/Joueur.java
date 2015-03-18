@@ -71,6 +71,10 @@ public class Joueur implements Comparable<Joueur> {
 	public void ajouterPoints(int pointage) {
 		this.pointage = this.pointage + pointage;
 	}
+	
+	public void setPointage(int p){
+		this.pointage = p;
+	}
 
 	public String[] getFacesObtenues() {
 		return facesObtenues;

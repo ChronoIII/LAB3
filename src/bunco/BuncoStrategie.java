@@ -16,15 +16,17 @@ Historique des modifications
 2015-03-15 Version initiale 
 2015-03-17 fonctionnement de base
 2015-03-17 vainqueur
+2015-03-18 plusieurs vainqueurs
  *******************************************************/
 
-package Bunco;
+package bunco;
 
 /**
  * @author Oliver
  *
  */
 import frameworkJeuDeDes.De;
+import frameworkJeuDeDes.Fabrique;
 import frameworkJeuDeDes.Joueur;
 import frameworkJeuDeDes.IStrategie;
 import frameworkJeuDeDes.Iterateur;
@@ -41,17 +43,45 @@ public class BuncoStrategie implements IStrategie {
 	private int somme = 0;
 
 	@Override
-	public String calculerLeVainqueur(Jeu jeu) {
+	public String[] calculerLeVainqueurs(Jeu jeu) {
 		Iterateur<Joueur> i = jeu.getListJoueurs().createIterator();
 		Joueur meneur = i.currentItem();
+		int nbVainqueurs = 0;
+		String[] nomsVainqueurs;
+		//i.next().setPointage(100);;
+		//i.currentItem().setPointage(100);
 		
+		//i = jeu.getListJoueurs().createIterator();
+		//qui ont le score le plus grand?
 		while(i.hasNext()) {
 			Joueur aComparable = i.next();
 			if(meneur.compareTo(aComparable) == 1) {
 				meneur = aComparable;
 			}
 		}
-		return meneur.getNom();
+		
+		//combien ont le même score?
+		i = jeu.getListJoueurs().createIterator();
+		while(i.hasNext()) {
+			Joueur aComparable = i.next();
+			if(meneur.compareTo(aComparable) == 0) {
+				nbVainqueurs++;
+			}
+		}
+		
+		nomsVainqueurs = new String[nbVainqueurs];
+		
+		//collecter les vainqueur
+		int j = 0;
+		i = jeu.getListJoueurs().createIterator();
+		while(i.hasNext()) {
+			Joueur aComparable = i.next();
+			if(meneur.compareTo(aComparable) == 0) {
+				nomsVainqueurs[j] = aComparable.getNom();
+				j++;
+			}
+		}
+		return nomsVainqueurs;
 	}
 
 	@Override

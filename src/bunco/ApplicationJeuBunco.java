@@ -18,7 +18,7 @@ Historique des modifications
  *******************************************************/
 
 
-package Bunco;
+package bunco;
 
 import javax.swing.JOptionPane;
 
@@ -39,6 +39,6 @@ public class ApplicationJeuBunco {
 			jeu.jouerTour(i);
 		}
 		
-		jeu.calculerVainqueur();
+		jeu.calculerVainqueurs();
 	}
 }

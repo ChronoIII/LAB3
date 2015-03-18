@@ -38,9 +38,9 @@ public interface IStrategie {
 	/**
 	 * 
 	 * @param jeu
-	 * @return le nom du vainqueur
+	 * @return les noms des vainqueurs
 	 */
-	public String calculerLeVainqueur(Jeu jeu);
+	public String[] calculerLeVainqueurs(Jeu jeu);
 
 	/**
 	 * Calcule le score du jeu
