@@ -26,6 +26,19 @@ import bunco.BuncoStrategie;
  *
  */
 public class Fabrique {
+	
+	/**
+	 * 
+	 * @param aCJ
+	 * @param aCD
+	 * @param aStrat
+	 * @return un jeu fait sur mesure
+	 */
+	public static Jeu creerJeu(CollectionJoueurs aCJ, CollectionDes aCD,
+			IStrategie aStrat) {
+		return new Jeu(aStrat, aCJ, aCD);
+	}
+
 	/**
 	 * Initialise un jeu Bunco+
 	 * 

@@ -32,34 +32,45 @@ public class Jeu {
 	private CollectionDes listDes;
 	private String[] nomsVainqueurs;
 
-	public Jeu(IStrategie aStrategie, CollectionJoueurs aListJoueurs, CollectionDes aListDes) {
+	public Jeu(IStrategie aStrategie, CollectionJoueurs aListJoueurs,
+			CollectionDes aListDes) {
 		strategie = aStrategie;
 		nbTours = strategie.getNombreTours();
 		listJoueurs = aListJoueurs;
 		listDes = aListDes;
 	}
+
 	/**
 	 * 
 	 * @param tour
 	 */
 	public void jouerTour(int tour) {
-		this.tour = tour; 
-		
+		this.tour = tour;
+
 		System.out.println();
 		System.out.println("tour :" + this.tour);
-		
-		strategie.calculerScoreTour(this);//passer tous les joueurs et calculer leurs points
+
+		strategie.calculerScoreTour(this);// passer tous les joueurs et calculer
+											// leurs points
 	}
-	
+
 	/**
 	 * 
 	 */
 	public void calculerVainqueurs() {
 		System.out.println();
-		nomsVainqueurs = strategie.calculerLeVainqueurs(this);	
+		nomsVainqueurs = strategie.calculerLeVainqueurs(this);
 		for (int i = 0; i < nomsVainqueurs.length; i++) {
 			System.out.println("Le vainqueur est " + nomsVainqueurs[i]);
 		}
+	}
+
+	/**
+	 * 
+	 * @return le nom du ou des vainqueurs
+	 */
+	public String[] getNomsVainqueurs() {
+		return (nomsVainqueurs);
 	}
 
 	public int getTour() {
@@ -93,7 +104,5 @@ public class Jeu {
 	public void setListDes(CollectionDes listDes) {
 		this.listDes = listDes;
 	}
-public  String[] getNomsVainqueurs(){
-	return(nomsVainqueurs);
-}
+
 }

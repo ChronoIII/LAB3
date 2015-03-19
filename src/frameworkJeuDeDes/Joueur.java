@@ -40,10 +40,15 @@ public class Joueur implements Comparable<Joueur> {
 		nextJoueurCree++;
 	}
 
+	/**
+	 * Roule chacuns des dés puis garde en mémoire les résultats
+	 * 
+	 * @param des
+	 */
 	public void jouer(CollectionDes des) {
 		facesObtenues = new String[des.length()];
 		Iterateur<De> i = des.createIterator();
-		while(i.hasNext()){
+		while (i.hasNext()) {
 			facesObtenues[i.currentItemPosition()] = i.currentItem().rouler();
 			i.next();
 		}
@@ -64,15 +69,20 @@ public class Joueur implements Comparable<Joueur> {
 		return comparer;
 	}
 
+	/**
+	 * Ajoute des points au joueur
+	 * 
+	 * @param pointage
+	 */
+	public void ajouterPoints(int pointage) {
+		this.pointage = this.pointage + pointage;
+	}
+
 	public int getPointage() {
 		return pointage;
 	}
 
-	public void ajouterPoints(int pointage) {
-		this.pointage = this.pointage + pointage;
-	}
-	
-	public void setPointage(int p){
+	public void setPointage(int p) {
 		this.pointage = p;
 	}
 
@@ -80,7 +90,7 @@ public class Joueur implements Comparable<Joueur> {
 		return facesObtenues;
 	}
 
-	public String getNom(){
+	public String getNom() {
 		return nom;
 	}
 }
