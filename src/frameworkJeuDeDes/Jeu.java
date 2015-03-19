@@ -30,6 +30,7 @@ public class Jeu {
 	private IStrategie strategie;
 	private CollectionJoueurs listJoueurs;
 	private CollectionDes listDes;
+	private String[] nomsVainqueurs;
 
 	public Jeu(IStrategie aStrategie, CollectionJoueurs aListJoueurs, CollectionDes aListDes) {
 		strategie = aStrategie;
@@ -55,7 +56,7 @@ public class Jeu {
 	 */
 	public void calculerVainqueurs() {
 		System.out.println();
-		String[] nomsVainqueurs = strategie.calculerLeVainqueurs(this);	
+		nomsVainqueurs = strategie.calculerLeVainqueurs(this);	
 		for (int i = 0; i < nomsVainqueurs.length; i++) {
 			System.out.println("Le vainqueur est " + nomsVainqueurs[i]);
 		}
@@ -92,4 +93,7 @@ public class Jeu {
 	public void setListDes(CollectionDes listDes) {
 		this.listDes = listDes;
 	}
+public  String[] getNomsVainqueurs(){
+	return(nomsVainqueurs);
+}
 }

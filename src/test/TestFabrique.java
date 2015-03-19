@@ -20,48 +20,40 @@ package test;
 
 import org.junit.Test;
 
-import frameworkJeuDeDes.De;
+import frameworkJeuDeDes.Fabrique;
 import junit.framework.TestCase;
 
-public class TestDe extends TestCase {
+public class TestFabrique extends TestCase {
 	private String[] tabTest = new String[] { "1", "2", "3", "4", "5", "6" };
-	private De deTest = new De(tabTest);
-	private De deTest2 = new De(tabTest);
 
 	@Test
-	public void testDe() {
-		assertNotNull(deTest);
+	public void testCreerJeuBunco() {
+		assertNotNull(Fabrique.creerJeuBunco(3));
 	}
 
 	@Test
-	public void testRouler() {
-		deTest.setFace("9");
-		deTest.rouler();
-		assertNotSame("9", deTest.getFaceObtenue());
+	public void testCreerJoueurs() {
+		assertNotNull(Fabrique.creerJoueurs(3));
 	}
 
 	@Test
-	public void testCompareTo() {
-		deTest.rouler();
-		deTest2.rouler();
-		if (deTest.compareTo(deTest2) == 1 || deTest.compareTo(deTest2) == -1) {
-			assertTrue(true);
-		} else {
-
-			assertFalse(false);
-		}
+	public void testCreerJoueur() {
+		assertNotNull(Fabrique.creerJoueur());
 	}
 
 	@Test
-	public void testGetFaceObtenue() {
-		deTest.rouler();
-		assertNotNull(deTest.getFaceObtenue());
+	public void testCreerDesClassiques() {
+		assertNotNull(Fabrique.creerDesClassiques(6));
 	}
 
 	@Test
-	public void testSetFace() {
-		deTest.setFace("6");
-		assertSame(deTest.getFaceObtenue(), "6");
+	public void testCreerDeClassique() {
+		assertNotNull(Fabrique.creerDeClassique());
+	}
+
+	@Test
+	public void testCreerDe() {
+		assertNotNull(Fabrique.creerDe(tabTest));
 	}
 
 }

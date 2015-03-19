@@ -72,4 +72,8 @@ public class De implements Comparable<De> {
 	public String getFaceObtenue() {
 		return faceObtenue;
 	}
+	
+	public void setFace(String face){
+		this.faceObtenue=face;
+	}
 }

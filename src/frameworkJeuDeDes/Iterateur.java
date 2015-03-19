@@ -63,8 +63,10 @@ public class Iterateur<T> {
 	public T currentItem() {
 		return items[position];
 	}
-	
+
 	public int currentItemPosition() {
 		return position;
 	}
+
+
 }

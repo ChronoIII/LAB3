@@ -1,33 +1,53 @@
 package test;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
-import frameworkJeuDeDes.EmptyCollectionException;
+import frameworkJeuDeDes.CollectionDes;
+import frameworkJeuDeDes.De;
 import frameworkJeuDeDes.Iterateur;
+import junit.framework.TestCase;
 
-public class TestIterateur {
+public class TestIterateur extends TestCase {
+	private CollectionDes collectionTest = new CollectionDes();
+	private String[] tabTest = new String[] { "1", "2", "3", "4", "5", "6" };
+	private De deTest1 = new De(tabTest);
+	private De deTest2 = new De(tabTest);
 
 	@Test
 	public void testIterateur() {
-		fail("Not yet implemented");
-
+		collectionTest.ajouterDe(deTest1);
+		assertNotNull(collectionTest.createIterator());
 	}
 
 	@Test
 	public void testNext() {
-		fail("Not yet implemented");
+		collectionTest.ajouterDe(deTest1);
+		collectionTest.ajouterDe(deTest2);
+		Iterateur iterateurTest = collectionTest.createIterator();
+		iterateurTest.next();
+		assertEquals(iterateurTest.next(), deTest2);
 	}
 
 	@Test
 	public void testHasNext() {
-		fail("Not yet implemented");
+		collectionTest.ajouterDe(deTest1);
+		Iterateur iterateurTest = collectionTest.createIterator();
+		iterateurTest.next();
+		assertFalse(iterateurTest.hasNext());
 	}
 
 	@Test
 	public void testCurrentItem() {
-		fail("Not yet implemented");
+		collectionTest.ajouterDe(deTest1);
+		Iterateur iterateurTest = collectionTest.createIterator();
+		assertNotNull(iterateurTest.currentItem());
+	}
+
+	@Test
+	public void testCurrentItemPosition() {
+		collectionTest.ajouterDe(deTest1);
+		Iterateur iterateurTest = collectionTest.createIterator();
+		assertEquals(iterateurTest.currentItemPosition(), 0);
 	}
 
 }
