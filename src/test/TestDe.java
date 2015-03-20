@@ -22,7 +22,9 @@ import org.junit.Test;
 
 import frameworkJeuDeDes.De;
 import junit.framework.TestCase;
-
+/*
+ * Teste les fonctions de De
+ */
 public class TestDe extends TestCase {
 	private String[] tabTest = new String[] { "1", "2", "3", "4", "5", "6" };
 	private De deTest = new De(tabTest);

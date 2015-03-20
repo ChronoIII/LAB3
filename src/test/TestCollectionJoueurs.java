@@ -24,7 +24,9 @@ import frameworkJeuDeDes.CollectionJoueurs;
 import frameworkJeuDeDes.Iterateur;
 import frameworkJeuDeDes.Joueur;
 import junit.framework.TestCase;
-
+/*
+ * Teste les fonctions de CollectionJoueurs
+ */
 public class TestCollectionJoueurs extends TestCase {
 	private CollectionJoueurs collectionTest = new CollectionJoueurs();
 	private Joueur joueurTest = new Joueur();

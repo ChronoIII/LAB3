@@ -27,7 +27,9 @@ import frameworkJeuDeDes.IStrategie;
 import frameworkJeuDeDes.Jeu;
 import frameworkJeuDeDes.Joueur;
 import junit.framework.TestCase;
-
+/*
+ * Teste les fonctions de Jeu
+ */
 public class TestJeu extends TestCase {
 	private Fabrique fabriqueTest = new Fabrique();
 	private Jeu jeuTest = fabriqueTest.creerJeuBunco(3);

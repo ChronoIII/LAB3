@@ -23,7 +23,9 @@ import bunco.BuncoStrategie;
 import frameworkJeuDeDes.Fabrique;
 import frameworkJeuDeDes.Jeu;
 import junit.framework.TestCase;
-
+/*
+ * Teste les fonctions de BuncoStrategie
+ */
 public class TestBuncoStrategie extends TestCase {
 	private BuncoStrategie stratTest = new BuncoStrategie();
 

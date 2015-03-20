@@ -27,6 +27,9 @@ import frameworkJeuDeDes.CollectionDes;
 import frameworkJeuDeDes.De;
 import frameworkJeuDeDes.Iterateur;
 
+/*
+ * Teste les fonctions de CollectionDes
+ */
 public class TestCollectionDes extends TestCase {
 	private String[] tabTest = new String[] { "1", "2", "3", "4", "5", "6" };
 	private De deTest1 = new De(tabTest);

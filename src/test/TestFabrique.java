@@ -22,7 +22,9 @@ import org.junit.Test;
 
 import frameworkJeuDeDes.Fabrique;
 import junit.framework.TestCase;
-
+/*
+ * Teste les fonctions de Fabrique
+ */
 public class TestFabrique extends TestCase {
 	private String[] tabTest = new String[] { "1", "2", "3", "4", "5", "6" };
 

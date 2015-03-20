@@ -24,7 +24,9 @@ import frameworkJeuDeDes.CollectionDes;
 import frameworkJeuDeDes.De;
 import frameworkJeuDeDes.Joueur;
 import junit.framework.TestCase;
-
+/*
+ * Teste les fonctions de Joueur
+ */
 public class TestJoueur extends TestCase {
 	private String[] tabTest = new String[] { "1", "2", "3", "4", "5", "6" };
 	private CollectionDes collectionTest = new CollectionDes();

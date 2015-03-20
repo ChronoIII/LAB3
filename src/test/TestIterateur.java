@@ -6,7 +6,9 @@ import frameworkJeuDeDes.CollectionDes;
 import frameworkJeuDeDes.De;
 import frameworkJeuDeDes.Iterateur;
 import junit.framework.TestCase;
-
+/*
+ * Teste les fonctions de Iterateur
+ */
 public class TestIterateur extends TestCase {
 	private CollectionDes collectionTest = new CollectionDes();
 	private String[] tabTest = new String[] { "1", "2", "3", "4", "5", "6" };
